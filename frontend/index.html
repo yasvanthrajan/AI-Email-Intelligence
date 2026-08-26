@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Email Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for professional typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="badge">Machine Learning Powered</div>
+            <h1>AI Email Intelligence</h1>
+            <p>Analyze email content, classification genres, and underlying emotional tones instantly.</p>
+        </header>
+
+        <!-- EMAIL INPUT -->
+        <section class="input-section">
+            <h2>Email Details</h2>
+            
+            <!-- SUBJECT INPUT -->
+            <div class="input-group">
+                <label for="subjectInput">Subject</label>
+                <input 
+                    type="text" 
+                    id="subjectInput" 
+                    placeholder="Enter email subject..."
+                >
+            </div>
+
+            <!-- BODY INPUT -->
+            <div class="input-group">
+                <label for="emailInput">Body Content</label>
+                <textarea 
+                    id="emailInput" 
+                    placeholder="Paste or type your email body here..."
+                ></textarea>
+            </div>
+
+            <button id="analyzeButton" onclick="analyzeEmail()">
+                <span class="button-text">Analyze Email</span>
+            </button>
+        </section>
+
+        <!-- LOADING -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <span>Analyzing email with AI model...</span>
+        </div>
+
+        <!-- ERROR -->
+        <div id="error" class="error hidden"></div>
+
+        <!-- RESULTS -->
+        <section id="results" class="results hidden">
+            <h2>Analysis Results</h2>
+
+            <!-- GENRE -->
+            <div class="result-card">
+                <h3>📂 Email Genre</h3>
+                <div id="genreResults" class="results-grid"></div>
+            </div>
+
+            <!-- EMOTION -->
+            <div class="result-card">
+                <h3>💭 Emotional Tone</h3>
+                <div id="emotionResults" class="results-grid"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
